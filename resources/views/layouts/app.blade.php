@@ -52,8 +52,6 @@
 
         <!-- cards -->
         <div class="w-full px-6 py-6 mx-auto">
-            <!-- cards -->
-            @include('partials.cards')
 
             {{ $slot }}
 
@@ -71,5 +69,5 @@
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <!-- main script file  -->
 <script src="../build/assets/js/soft-ui-dashboard-tailwind.js?v=1.0.5" async></script>
-
+@stack('scripts')
 </html>

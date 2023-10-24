@@ -1,8 +1,9 @@
 <div>
     <ul class="flex flex-col pl-0 mb-0">
         <li class="mt-0.5 w-full">
-            <a class="py-2.7 shadow-soft-xl text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap rounded-lg bg-white px-4 font-semibold text-slate-700 transition-colors"
-                href="../build/pages/dashboard.html">
+            <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors
+                @if(Route::is('dashboard')) shadow-soft-xl rounded-lg bg-white font-semibold text-slate-700 @endif"
+                href="{{ route('dashboard') }}">
                 <div
                     class="bg-gradient-to-tl from-blue-900 shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
                     <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1"
@@ -30,8 +31,9 @@
         </li>
 
         <li class="mt-0.5 w-full">
-            <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors"
-                href="../build/pages/tables.html">
+            <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors
+            @if(Route::is('crm')) shadow-soft-xl rounded-lg bg-white font-semibold text-slate-700 @endif"
+                href="{{ route('crm') }}">
                 <div
                     class="bg-gradient-to-tl from-blue-900 shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">

@@ -1,4 +1,8 @@
 <x-app-layout>
+    {{--  cards  --}}
+            @include('partials.cards')
+    {{--  end cards  --}}
+
     {{--  charts  --}}
     <div class="flex flex-wrap mt-6 -mx-3">
         <div class="w-full max-w-full px-3 mt-0 mb-6 lg:mb-0 lg:w-5/12 lg:flex-none">
