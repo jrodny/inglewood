@@ -1,9 +1,19 @@
 <?php
 
 
-use App\Http\Controllers\Pages\DashboardController;
 use App\Http\Controllers\PermissionController;
 use Illuminate\Support\Facades\Route;
+
+
+
+
+//dashboard index or main view
+use App\Http\Controllers\Pages\DashboardController;
+//end dashboard
+
+//admin dashboard
+use App\Http\Controllers\Admin\AdminDashBoardController;
+//end admin dashboard
 
 //crm controllers
 use App\Http\Controllers\Pages\CrmController;
@@ -26,6 +36,9 @@ Route::get('/', function () { return view('auth.login'); })->middleware('guest')
 Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])->group(function () {
     Route::get('/dashboard', DashboardController::class)->name('dashboard');
 
+    Route::prefix('admin')->group(function () {
+        Route::get('/', AdminDashBoardController::class)->name('admin-dashboard');
+    });
 
     Route::prefix('crm')->group(function () {
         Route::get('/', CrmController::class)->name('crm');

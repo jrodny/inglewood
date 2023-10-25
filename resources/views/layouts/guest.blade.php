@@ -21,7 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="apple-touch-icon" sizes="76x76" href="../build/assets/img/apple-icon.png" />
     <link rel="icon" type="image/png" href="../build/assets/img/favicon.png" />
-    <title>Soft UI Dashboard Tailwind</title>
+    <title>Plant inglewood</title>
     <!-- Fonts and icons -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <!-- Font Awesome Icons -->
@@ -51,7 +51,7 @@
                             <div
                                 class="absolute top-0 hidden w-3/5 h-full -mr-32 overflow-hidden -skew-x-10 -right-40 rounded-bl-xl md:block">
                                 <div class="absolute inset-x-0 top-0 z-0 h-full -ml-16 bg-cover skew-x-10"
-                                    style="background-image: url('../build/assets/img/curved-images/curved6.jpg')"></div>
+                                    style="background-image: url('../images/inglewood-organic-chicken-breast-fillet-banner.png')"></div>
                             </div>
                         </div>
                     </div>
@@ -59,54 +59,6 @@
             </div>
         </section>
     </main>
-    <footer class="py-12">
-        <div class="container">
-            <div class="flex flex-wrap -mx-3">
-                <div class="flex-shrink-0 w-full max-w-full mx-auto mb-6 text-center lg:flex-0 lg:w-8/12">
-                    <a href="javascript:;" target="_blank" class="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"> Company
-                    </a>
-                    <a href="javascript:;" target="_blank" class="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"> About
-                        Us </a>
-                    <a href="javascript:;" target="_blank" class="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"> Team
-                    </a>
-                    <a href="javascript:;" target="_blank" class="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12">
-                        Products </a>
-                    <a href="javascript:;" target="_blank" class="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"> Blog
-                    </a>
-                    <a href="javascript:;" target="_blank" class="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"> Pricing
-                    </a>
-                </div>
-                <div class="flex-shrink-0 w-full max-w-full mx-auto mt-2 mb-6 text-center lg:flex-0 lg:w-8/12">
-                    <a href="javascript:;" target="_blank" class="mr-6 text-slate-400">
-                        <span class="text-lg fab fa-dribbble"></span>
-                    </a>
-                    <a href="javascript:;" target="_blank" class="mr-6 text-slate-400">
-                        <span class="text-lg fab fa-twitter"></span>
-                    </a>
-                    <a href="javascript:;" target="_blank" class="mr-6 text-slate-400">
-                        <span class="text-lg fab fa-instagram"></span>
-                    </a>
-                    <a href="javascript:;" target="_blank" class="mr-6 text-slate-400">
-                        <span class="text-lg fab fa-pinterest"></span>
-                    </a>
-                    <a href="javascript:;" target="_blank" class="mr-6 text-slate-400">
-                        <span class="text-lg fab fa-github"></span>
-                    </a>
-                </div>
-            </div>
-            <div class="flex flex-wrap -mx-3">
-                <div class="w-8/12 max-w-full px-3 mx-auto mt-1 text-center flex-0">
-                    <p class="mb-0 text-slate-400">
-                        Copyright ©
-                        <script>
-                            document.write(new Date().getFullYear());
-                        </script>
-                        Soft by Creative Tim.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
 </body>
 <!-- plugin for scrollbar  -->
 <script src="../build/assets/js/plugins/perfect-scrollbar.min.js" async></script>
