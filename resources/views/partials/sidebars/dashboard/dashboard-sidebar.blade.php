@@ -4,7 +4,7 @@
                 @if (Route::is('admin-dashboard')) shadow-soft-xl rounded-lg bg-white font-semibold text-slate-700 @endif"
                 href="{{ route('admin-dashboard') }}">
                 <div
-                    class="bg-gradient-to-tl from-blue-900 shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
+                    class="bg-gradient-to-tl from-gray-900 to-slate-800 shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
                     <svg xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"
                         image-rendering="optimizeQuality" shape-rendering="geometricPrecision"
                         text-rendering="geometricPrecision" viewBox="0, 0, 450, 512" id="Administrator">
@@ -47,7 +47,7 @@
             @if (Route::is('dashboard')) shadow-soft-xl rounded-lg bg-white font-semibold text-slate-700 @endif"
             href="{{ route('dashboard') }}">
             <div
-                class="bg-gradient-to-tl from-blue-900 shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
+                class="bg-gradient-to-tl from-gray-900 to-slate-800 shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
                 <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1"
                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>Dashboard</title>
@@ -76,7 +76,7 @@
         @if (Route::is('crm')) shadow-soft-xl rounded-lg bg-white font-semibold text-slate-700 @endif"
             href="{{ route('crm') }}">
             <div
-                class="bg-gradient-to-tl from-blue-900 shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
+                class="bg-gradient-to-tl from-gray-900 to-slate-800 shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
                     viewBox="0,0,256,256">
                     <title>CRM</title>
@@ -100,7 +100,7 @@
         <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors"
             href="../build/pages/billing.html">
             <div
-                class="bg-gradient-to-tl from-blue-900 shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center fill-current stroke-0 text-center xl:p-2.5">
+                class="bg-gradient-to-tl from-gray-900 to-slate-800 shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center fill-current stroke-0 text-center xl:p-2.5">
                 <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1"
                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>credit-card</title>

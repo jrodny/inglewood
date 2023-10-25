@@ -18,9 +18,9 @@
                     </div>
                     <div class="px-3 text-right basis-1/3">
                         <div
-                            class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-tl from-blue-900">
+                            class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-tl from-gray-900 to-slate-800 ">
                             <i
-                                class="ni leading-none ni-money-coins text-lg relative top-3.5 text-gold"></i>
+                                class="ni leading-none ni-money-coins text-lg relative top-3.5" style="color: #FFD700"></i>
                         </div>
                     </div>
                 </div>

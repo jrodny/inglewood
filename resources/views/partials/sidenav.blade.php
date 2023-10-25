@@ -19,7 +19,7 @@
                 method="POST" action="{{ route('logout') }}">
                 @csrf
                 <div
-                class="bg-gradient-to-tl from-blue-900 shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
+                class="bg-gradient-to-tl from-gray-900 to-slate-800 shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
                         fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -30,6 +30,7 @@
                     <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Logout</span>
                 </button>
             </form>
+
         </li>
         {{-- end logout  --}}
     </ul>
