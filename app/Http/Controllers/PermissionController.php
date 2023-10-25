@@ -9,8 +9,8 @@ class PermissionController extends Controller
 {
     public function index()
     {
-        $user1 = User::find(1);
-        $user1->givePermissionTo(['ModuleEgg', 'ModuleRecvEgg', 'ModuleHatchery', 'ModuleShed', 'ModuleReports', 'ModuleAdmin']);
+        $user1 = User::where('id', 2)->first();
+        $user1->givePermissionTo(['ModuleEgg']);
 
         dd($user1);
     }

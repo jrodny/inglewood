@@ -18,6 +18,8 @@ use App\Http\Controllers\Admin\AdminDashBoardController;
 //crm controllers
 use App\Http\Controllers\Pages\CrmController;
 use App\Http\Controllers\Pages\Crm\FindCustomerController;
+use App\Http\Middleware\CheckPermission;
+
 // end crm controllers
 
 /*
@@ -34,10 +36,14 @@ use App\Http\Controllers\Pages\Crm\FindCustomerController;
 Route::get('/', function () { return view('auth.login'); })->middleware('guest');
 
 Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])->group(function () {
+
     Route::get('/dashboard', DashboardController::class)->name('dashboard');
 
-    Route::prefix('admin')->group(function () {
-        Route::get('/', AdminDashBoardController::class)->name('admin-dashboard');
+    // middleware only admin can view and visit routes
+    Route::middleware([CheckPermission::class . ':ModuleAdmin'])->group(function () {
+        Route::prefix('admin')->group(function () {
+            Route::get('/', AdminDashBoardController::class)->name('admin-dashboard');
+        });
     });
 
     Route::prefix('crm')->group(function () {
