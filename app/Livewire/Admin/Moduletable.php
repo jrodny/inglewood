@@ -13,7 +13,7 @@ class Moduletable extends Component
 
     public $search = '';
     private $pagination = 10;
-
+    protected $paginationTheme = 'custom';
 
     public function render()
     {

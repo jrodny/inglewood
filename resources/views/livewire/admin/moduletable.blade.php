@@ -78,7 +78,9 @@
                                     @endforelse
                                 </tbody>
                             </table>
-                        {{ $modules->links('livewire::test') }}
+                            <div class="flex items-center justify-center">
+                                {{ $modules->links() }}
+                            </div>
                         </div>
                     </div>
                 </div>
