@@ -78,7 +78,7 @@
                                     @endforelse
                                 </tbody>
                             </table>
-                           {{ $modules->links() }}
+                        {{ $modules->links('livewire::test') }}
                         </div>
                     </div>
                 </div>

@@ -12,11 +12,12 @@ class Moduletable extends Component
     use WithPagination;
 
     public $search = '';
-     private $pagination = 10;
+    private $pagination = 10;
+
 
     public function render()
     {
-        $modules = Permission::search($this->search)->simplePaginate($this->pagination);
+        $modules = Permission::search($this->search)->paginate($this->pagination);
         return view('livewire.admin.moduletable', ['modules' => $modules]);
     }
 }
