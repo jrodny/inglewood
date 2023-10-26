@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Livewire\Admin;
+
+use App\Models\User;
+use Livewire\Component;
+use Livewire\WithPagination;
+use Spatie\Permission\Models\Permission;
+
+class Moduletable extends Component
+{
+    use WithPagination;
+
+    public $search = '';
+     private $pagination = 10;
+
+    public function render()
+    {
+        $modules = Permission::search($this->search)->simplePaginate($this->pagination);
+        return view('livewire.admin.moduletable', ['modules' => $modules]);
+    }
+}

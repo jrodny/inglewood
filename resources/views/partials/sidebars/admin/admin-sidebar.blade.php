@@ -7,8 +7,9 @@
                 <div
                     class="bg-gradient-to-tl from-gray-900 to-slate-800 shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
                     <svg xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"
+                    viewBox="20, 20, 512, 512"
                         image-rendering="optimizeQuality" shape-rendering="geometricPrecision"
-                        text-rendering="geometricPrecision" viewBox="0, 0, 450, 512" id="Administrator">
+                        text-rendering="geometricPrecision" id="Administrator">
                         <path fill="#ffd700" fill-rule="nonzero"
                             d="M368 309c3,-1 6,1 7,4 1,3 -1,6 -4,7 -9,3 -18,5 -28,6 -9,1 -19,2 -29,2 -11,0 -21,-1 -31,-2 -10,-1 -20,-4 -29,-6 -3,-1 -5,-5 -4,-8 1,-3 4,-5 8,-4 8,3 17,5 27,6 9,1 19,2 29,2 9,0 19,0 27,-2 10,-1 19,-3 27,-5z"
                             class="color474748 svgShape"></path>
