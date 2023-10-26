@@ -2,11 +2,11 @@
 
 namespace App\Livewire\Admin;
 
+use App\Models\User;
 use Livewire\Component;
 use Livewire\WithPagination;
-use Spatie\Permission\Models\Permission;
 
-class Moduletable extends Component
+class UsersTable extends Component
 {
     use WithPagination;
 
@@ -16,7 +16,7 @@ class Moduletable extends Component
 
     public function render()
     {
-        $modules = Permission::search($this->search)->paginate($this->pagination);
-        return view('livewire.admin.module-table', ['modules' => $modules]);
+        $users = User::search($this->search)->paginate($this->pagination);
+        return view('livewire.admin.users-table', ['users' => $users]);
     }
 }

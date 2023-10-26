@@ -53,4 +53,4 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])
 });
 
 
-//Route::get('/perm', [PermissionController::class, 'index']);
+Route::get('/perm', [PermissionController::class, 'index']);

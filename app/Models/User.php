@@ -31,6 +31,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'status',
     ];
 
     /**
@@ -66,6 +67,14 @@ class User extends Authenticatable
     public function setPasswordAttributes($password)
     {
         $this->attributes['password'] = bcrypt($password);
+    }
+
+    public function scopeSearch($query, $search)
+    {
+        return $query->where('name', 'like', '%' . $search . '%')
+        ->orWhere('username', 'like', '%'. $search. '%')
+        ->orWhere('email', 'like', '%'. $search. '%')
+        ->orWhere('id', 'like', '%'. $search. '%');
     }
 
 }
