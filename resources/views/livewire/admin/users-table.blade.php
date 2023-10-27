@@ -124,5 +124,8 @@
                 </tbody>
             </table>
         </div>
+        <div class="flex items-center justify-center">
+            {{ $users->links() }}
+        </div>
     </div>
 </div>

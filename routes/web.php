@@ -44,6 +44,7 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])
     Route::middleware([CheckPermission::class . ':ModuleAdmin'])->prefix('admin')->name('admin.')->group(function () {
         Route::get('/', AdminDashBoardController::class)->name('dashboard');
         Route::get('/user', [UserController::class, 'index'])->name('user.index');
+        Route::post('/user/store', [UserController::class, 'store'])->name('user.store');
     });
 
     Route::prefix('crm')->group(function () {
@@ -53,4 +54,4 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])
 });
 
 
-Route::get('/perm', [PermissionController::class, 'index']);
+//Route::get('/perm', [PermissionController::class, 'index']);

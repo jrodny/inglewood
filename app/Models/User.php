@@ -77,4 +77,17 @@ class User extends Authenticatable
                     ->orWhere('id', 'like', '%'. $search. '%');
     }
 
+    protected static function boot()
+    {
+        parent::boot();
+
+        //auto generated password
+        static::creating(function ($user) {
+        // Get the first 4 characters of the modified username
+        $firstFourCharacters = substr($user->username, 0, 4);
+        // Use the modified username as the password
+        $user->password = bcrypt($firstFourCharacters . 'ingle123');
+        });
+    }
+
 }

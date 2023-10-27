@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateEditUserRequest;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -26,9 +28,13 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(CreateEditUserRequest $request)
     {
-        //
+
+        User::create(array_merge([
+            'name' => $request['fname']. ' ' .$request['lname'],
+        ],$request->validated()));
+
     }
 
     /**
