@@ -41,11 +41,9 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])
     Route::get('/dashboard', DashboardController::class)->name('dashboard');
 
     // middleware only admin can view and visit routes
-    Route::middleware([CheckPermission::class . ':ModuleAdmin'])->group(function () {
-        Route::prefix('admin')->name('admin.')->group(function () {
-            Route::get('/', AdminDashBoardController::class)->name('dashboard');
-            Route::get('/user', [UserController::class, 'index'])->name('user.index');
-        });
+    Route::middleware([CheckPermission::class . ':ModuleAdmin'])->prefix('admin')->name('admin.')->group(function () {
+        Route::get('/', AdminDashBoardController::class)->name('dashboard');
+        Route::get('/user', [UserController::class, 'index'])->name('user.index');
     });
 
     Route::prefix('crm')->group(function () {
