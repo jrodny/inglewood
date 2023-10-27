@@ -1,10 +1,5 @@
 <x-app-layout>
-
-
-
-
-
-        <div class="flex flex-wrap -mx-3">
+    <div class="flex flex-wrap -mx-3">
             {{--  users list  --}}
             <div class="w-full max-w-full px-3 mt-3 md:w-7/12 md:flex-none">
                 <div class="flex-auto p-4 pb-0">
@@ -32,6 +27,5 @@
                 </div>
             </div>
             {{-- end module list  --}}
-        </div>
-
+    </div>
 </x-app-layout>

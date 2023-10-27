@@ -113,6 +113,13 @@
                             </td>
                         </tr>
                     @empty
+                    <tr>
+                        <td>
+                            <h6 class="mb-0 text-sm leading-normal">
+                                &nbsp; &nbsp; {{ $search }} Not found
+                            </h6>
+                            </td>
+                    </tr>
                     @endforelse
                 </tbody>
             </table>
