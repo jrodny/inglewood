@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\Pages;
+namespace App\Http\Controllers\Crm;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+class CrmController extends Controller
 {
     /**
      * Handle the incoming request.
      */
     public function __invoke(Request $request): View
     {
-        return view('dashboard');
+        return view('Pages.crm.crm');
     }
 }

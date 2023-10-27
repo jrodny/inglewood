@@ -13,7 +13,7 @@
                             aria-current="page">{{ Request::path() }}</li>
                         @include('partials.subpages')
                     </ol>
-                    <h6 class="mb-0 font-bold capitalize">{{ Request::path() }}</h6>
+                    <h6 class="mb-0 capitalize">{{ Request::path() }}</h6>
 
                 </nav>
 

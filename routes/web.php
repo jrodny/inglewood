@@ -8,16 +8,17 @@ use Illuminate\Support\Facades\Route;
 
 
 //dashboard index or main view
-use App\Http\Controllers\Pages\DashboardController;
+use App\Http\Controllers\DashboardController;
 //end dashboard
 
 //admin dashboard
 use App\Http\Controllers\Admin\AdminDashBoardController;
+use App\Http\Controllers\Admin\UserController;
 //end admin dashboard
 
 //crm controllers
-use App\Http\Controllers\Pages\CrmController;
-use App\Http\Controllers\Pages\Crm\FindCustomerController;
+use App\Http\Controllers\Crm\CrmController;
+use App\Http\Controllers\Crm\FindCustomerController;
 use App\Http\Middleware\CheckPermission;
 
 // end crm controllers
@@ -41,8 +42,9 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])
 
     // middleware only admin can view and visit routes
     Route::middleware([CheckPermission::class . ':ModuleAdmin'])->group(function () {
-        Route::prefix('admin')->group(function () {
-            Route::get('/', AdminDashBoardController::class)->name('admin-dashboard');
+        Route::prefix('admin')->name('admin.')->group(function () {
+            Route::get('/', AdminDashBoardController::class)->name('dashboard');
+            Route::get('/user', [UserController::class, 'index'])->name('user.index');
         });
     });
 

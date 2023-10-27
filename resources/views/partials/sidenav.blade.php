@@ -1,7 +1,7 @@
 <div>
     <ul class="flex flex-col pl-0 mb-0">
         {{--  admin sidebar  --}}
-        @if(Route::is('admin-dashboard'))
+        @if (Str::startsWith(Route::currentRouteName(), 'admin.'))
             @include('partials.sidebars.admin.admin-sidebar')
         @endif
         {{--  end admin dashboard sidebar  --}}
