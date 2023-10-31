@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateEditUserRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Permission;
 
 class UserController extends Controller
 {
@@ -14,7 +15,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('Pages.admin.users.user-index');
+        $permissions = Permission::get();
+        return view('Pages.admin.users.user-index', ['permissions' => $permissions]);
     }
 
     /**
@@ -31,9 +33,14 @@ class UserController extends Controller
     public function store(CreateEditUserRequest $request)
     {
 
-        User::create(array_merge([
+        $test = User::create(array_merge([
             'name' => $request['fname']. ' ' .$request['lname'],
         ],$request->validated()));
+
+        $data = $request['modules'];
+        $test->givePermissionTo([$data]);
+        //dd($test);
+        return redirect()->route('admin.dashboard')->with('success', 'User created successfully');
 
     }
 

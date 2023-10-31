@@ -89,5 +89,4 @@ class User extends Authenticatable
         $user->password = bcrypt($firstFourCharacters . 'ingle123');
         });
     }
-
 }

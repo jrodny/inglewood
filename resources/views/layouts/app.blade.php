@@ -20,7 +20,7 @@
     <!-- Main Styling -->
     <link href="../build/assets/css/soft-ui-dashboard-tailwind.css?v=1.0.5" rel="stylesheet" />
     <!-- Scripts -->
-
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <!-- Styles -->
     @livewireStyles
 </head>
@@ -53,7 +53,7 @@
 
         <!-- cards -->
         <div class="w-full px-6 py-6 mx-auto">
-
+            @include('partials.alert')
             {{ $slot }}
 
            @include('partials.footer')
