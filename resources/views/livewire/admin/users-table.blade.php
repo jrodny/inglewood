@@ -1,12 +1,12 @@
 <div class="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border">
     @if (session()->has('message'))
-    <div x-data="{ show: true }" x-init="setTimeout(() => show = false, 3000)" x-show="show" class="relative w-full p-4 text-white rounded-lg bg-lime-500">
-        {{ session('message') }}
-    </div>
-@endif
+        <div x-data="{ show: true }" x-init="setTimeout(() => show = false, 3000)" x-show="show" class="relative w-full p-4 text-white rounded-lg bg-lime-500">
+            {{ session('message') }}
+        </div>
+    @endif
     <div class="flex flex-wrap -mx-3 p-6 pb-3 mb-0">
         <div class="flex items-center flex-none w-1/2 max-w-full px-3">
-            <h6 class="mb-0">Customer List</h6>
+            <h6 class="mb-0">Users List</h6>
         </div>
         <div class="flex-none w-1/2 max-w-full px-3 text-right">
             <div class="relative flex flex-wrap items-stretch w-full transition-all rounded-lg ease-soft">

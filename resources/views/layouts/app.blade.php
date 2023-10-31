@@ -21,8 +21,6 @@
     <link href="../build/assets/css/soft-ui-dashboard-tailwind.css?v=1.0.5" rel="stylesheet" />
     <!-- Scripts -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
-    @include('sweetalert::alert')
     <!-- Styles -->
     @livewireStyles
 </head>
