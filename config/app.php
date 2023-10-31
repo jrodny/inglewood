@@ -172,7 +172,6 @@ return [
         App\Providers\JetstreamServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
-        RealRashid\SweetAlert\SweetAlertServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -189,7 +188,6 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
         'Debugbar' => Barryvdh\Debugbar\Facades\Debugbar::class,
-        'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
     ])->toArray(),
 
 ];

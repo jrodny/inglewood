@@ -21,6 +21,8 @@
     <link href="../build/assets/css/soft-ui-dashboard-tailwind.css?v=1.0.5" rel="stylesheet" />
     <!-- Scripts -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+    @include('sweetalert::alert')
     <!-- Styles -->
     @livewireStyles
 </head>
@@ -54,13 +56,14 @@
         <!-- cards -->
         <div class="w-full px-6 py-6 mx-auto">
             @include('partials.alert')
+
             {{ $slot }}
 
-           @include('partials.footer')
+            @include('partials.footer')
         </div>
         <!-- end cards -->
     </main>
-
+    @livewireScripts
 </body>
 <!-- plugin for charts  -->
 <script src="../build/assets/js/plugins/chartjs.min.js" async></script>
@@ -70,6 +73,5 @@
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <!-- main script file  -->
 <script src="../build/assets/js/soft-ui-dashboard-tailwind.js?v=1.0.5" async></script>
-@include('sweetalert::alert')
 @stack('scripts')
 </html>

@@ -1,4 +1,9 @@
 <div class="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border">
+    @if (session()->has('message'))
+    <div x-data="{ show: true }" x-init="setTimeout(() => show = false, 3000)" x-show="show" class="relative w-full p-4 text-white rounded-lg bg-lime-500">
+        {{ session('message') }}
+    </div>
+@endif
     <div class="flex flex-wrap -mx-3 p-6 pb-3 mb-0">
         <div class="flex items-center flex-none w-1/2 max-w-full px-3">
             <h6 class="mb-0">Customer List</h6>
@@ -86,34 +91,51 @@
                             </td>
                             <td
                                 class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                                <form method="POST" action="{{ route('admin.user.change-status', $user->id) }}">
-                                    @method('PUT')
-                                    @csrf
-                                <span
-                                    class="bg-blue-500 px-2.5 text-xs
+                                <div x-data="{ open: false }">
+                                    <span
+                                        class="bg-blue-500 px-2.5 text-xs
                             rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center
                             align-baseline font-bold uppercase leading-none text-white">
-                                    <i class="fas fa-edit" aria-hidden="true"> </i>
-                                    edit
-                                </span>
-                                @if ($user->status == 1)
-                                    <button type="submit">
+                                        <i class="fas fa-edit" aria-hidden="true"> </i>
+                                        edit
+                                    </span>
+                                    @if ($user->status == 1)
+
+                                        <button @click="open = ! open">
+                                            <span
+                                                                    class="bg-yellow-500 px-2.5 text-xs
+                                                    rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center
+                                                    align-baseline font-bold uppercase leading-none text-white">
+                                                                    <i class="fas fa-times-circle" aria-hidden="true"> </i>
+                                                </span>
+                                        </button>
+
+                                        <div x-show="open" @click.outside="open = false">
+                                            <button type="submit"
+                                                    wire:click.prevent="editStatus({{ $user->id }})"
+                                                >
+                                                                <span
+                                                                    class="bg-red-600 px-2.5 text-xs
+                                                    rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center
+                                                    align-baseline font-bold uppercase leading-none text-white">
+                                                                    <i class="fas fa-times" aria-hidden="true"> </i>
+                                                </span>
+                                            </button>
+                                        </div>
+
+                                    @else
+                                    <button type="submit"
+                                                    wire:click.prevent="editStatus({{ $user->id }})"
+                                                >
                                         <span
-                                            class="bg-red-600 px-2.5 text-xs
-                                rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center
-                                align-baseline font-bold uppercase leading-none text-white">
-                                            <i class="fas fa-times" aria-hidden="true"> </i>
+                                            class="bg-blue-900 px-2.5 text-xs
+                            rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center
+                            align-baseline font-bold uppercase leading-none text-white">
+                                            <i class="fas fa-retweet" aria-hidden="true"> </i>
                                         </span>
                                     </button>
-                                @else
-                                    <span
-                                        class="bg-green-600 px-2.5 text-xs
-                            rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center
-                            align-baseline font-bold uppercase leading-none text-white">
-                                        <i class="fas fa-check" aria-hidden="true"> </i>
-                                    </span>
-                                @endif
-                            </form>
+                                    @endif
+                                </div>
                             </td>
                         </tr>
                     @empty
@@ -133,3 +155,6 @@
         </div>
     </div>
 </div>
+
+
+

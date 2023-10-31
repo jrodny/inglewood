@@ -26,7 +26,7 @@
                 <div>
                     &nbsp;
                 </div>
-                @livewire('admin.module-table')
+                @livewire('admin.module-table', )
                 </div>
             </div>
             {{-- end module list  --}}

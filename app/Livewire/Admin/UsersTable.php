@@ -14,10 +14,21 @@ class UsersTable extends Component
     private $pagination = 10;
     protected $paginationTheme = 'custom';
 
+    public function editStatus(User $id)
+    {
+        $newStatus = $id->status == 0 ? 1 : 0; // Toggle the status
+        $id->update(['status' => $newStatus]);
+
+        session()->flash('message', 'User status updated successfully');
+
+        return redirect()->to('/admin');
+    }
+
     public function render()
     {
         $users = User::where('id', '!=', auth()->id())
                 ->search($this->search)
+                ->orderBy('status', 'desc')
                 ->paginate($this->pagination);
         return view('livewire.admin.users-table', ['users' => $users]);
     }
