@@ -68,7 +68,7 @@
                                 <p class="mb-0 text-xs leading-tight text-slate-400"> {{ $user->username }}</p>
                             </td>
                             <td class="p-2 align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                                @if($user->status == 1)
+                                @if ($user->status == 1)
                                     <span
                                         class="bg-green-600 px-2.5 text-xs
                                 rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center
@@ -86,6 +86,9 @@
                             </td>
                             <td
                                 class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
+                                <form method="POST" action="{{ route('admin.user.change-status', $user->id) }}">
+                                    @method('PUT')
+                                    @csrf
                                 <span
                                     class="bg-blue-500 px-2.5 text-xs
                             rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center
@@ -93,33 +96,34 @@
                                     <i class="fas fa-edit" aria-hidden="true"> </i>
                                     edit
                                 </span>
-                               @if ($user->status == 1)
-                               <span
-                               class="bg-red-600 px-2.5 text-xs
-                           rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center
-                           align-baseline font-bold uppercase leading-none text-white">
-                               <i class="fas fa-times" aria-hidden="true"> </i>
-
-                           </span>
-                               @else
-                               <span
-                               class="bg-green-600 px-2.5 text-xs
-                           rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center
-                           align-baseline font-bold uppercase leading-none text-white">
-                               <i class="fas fa-check" aria-hidden="true"> </i>
-
-                           </span>
-                               @endif
+                                @if ($user->status == 1)
+                                    <button type="submit">
+                                        <span
+                                            class="bg-red-600 px-2.5 text-xs
+                                rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center
+                                align-baseline font-bold uppercase leading-none text-white">
+                                            <i class="fas fa-times" aria-hidden="true"> </i>
+                                        </span>
+                                    </button>
+                                @else
+                                    <span
+                                        class="bg-green-600 px-2.5 text-xs
+                            rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center
+                            align-baseline font-bold uppercase leading-none text-white">
+                                        <i class="fas fa-check" aria-hidden="true"> </i>
+                                    </span>
+                                @endif
+                            </form>
                             </td>
                         </tr>
                     @empty
-                    <tr>
-                        <td>
-                            <h6 class="mb-0 text-sm leading-normal">
-                                &nbsp; &nbsp; {{ $search }} Not found
-                            </h6>
+                        <tr>
+                            <td>
+                                <h6 class="mb-0 text-sm leading-normal">
+                                    &nbsp; &nbsp; {{ $search }} Not found
+                                </h6>
                             </td>
-                    </tr>
+                        </tr>
                     @endforelse
                 </tbody>
             </table>

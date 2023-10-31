@@ -7,6 +7,7 @@ use App\Http\Requests\CreateEditUserRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Permission;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class UserController extends Controller
 {
@@ -37,9 +38,10 @@ class UserController extends Controller
             'name' => $request['fname']. ' ' .$request['lname'],
         ],$request->validated()));
 
+        //give permission to this user
         $moduleList = $request['modules'];
         $user->givePermissionTo([$moduleList]);
-        //dd($test);
+
         return redirect()->route('admin.dashboard')->with('success', 'User created successfully');
 
     }
@@ -55,7 +57,7 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(User $id)
     {
         //
     }
@@ -74,5 +76,13 @@ class UserController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function updateStatus(User $id)
+    {
+        $id->update(['status' => '0']);
+
+        return redirect()->route('admin.dashboard')
+        ->with('success', 'User status updated successfully');
     }
 }

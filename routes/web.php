@@ -45,6 +45,7 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])
         Route::get('/', AdminDashBoardController::class)->name('dashboard');
         Route::get('/user', [UserController::class, 'index'])->name('user.index');
         Route::post('/user/store', [UserController::class, 'store'])->name('user.store');
+        Route::put('/user/change-status/{id}', [UserController::class, 'updateStatus'])->name('user.change-status');
     });
 
     Route::prefix('crm')->group(function () {

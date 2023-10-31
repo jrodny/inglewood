@@ -16,7 +16,9 @@ class UsersTable extends Component
 
     public function render()
     {
-        $users = User::search($this->search)->paginate($this->pagination);
+        $users = User::where('id', '!=', auth()->id())
+                ->search($this->search)
+                ->paginate($this->pagination);
         return view('livewire.admin.users-table', ['users' => $users]);
     }
 }
