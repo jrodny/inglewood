@@ -33,12 +33,12 @@ class UserController extends Controller
     public function store(CreateEditUserRequest $request)
     {
 
-        $test = User::create(array_merge([
+        $user = User::create(array_merge([
             'name' => $request['fname']. ' ' .$request['lname'],
         ],$request->validated()));
 
-        $data = $request['modules'];
-        $test->givePermissionTo([$data]);
+        $moduleList = $request['modules'];
+        $user->givePermissionTo([$moduleList]);
         //dd($test);
         return redirect()->route('admin.dashboard')->with('success', 'User created successfully');
 
