@@ -26,7 +26,7 @@
                     <a class="inline-block px-8 py-2 mb-0 mr-4 font-bold text-center uppercase align-middle transition-all bg-transparent border border-solid rounded-lg shadow-none cursor-pointer leading-pro border-fuchsia-500 ease-soft-in text-xs hover:scale-102 active:shadow-soft-xs text-fuchsia-500 hover:border-fuchsia-500 active:bg-fuchsia-500 active:hover:text-fuchsia-500 hover:text-fuchsia-500 tracking-tight-soft hover:bg-transparent hover:opacity-75 hover:shadow-none active:text-white active:hover:bg-transparent" target="_blank" href="https://www.creative-tim.com/builder/soft-ui?ref=navbar-dashboard&amp;_ga=2.76518741.1192788655.1647724933-1242940210.1644448053">Online Builder</a>
                 </li> -->
                         <li class="flex items-center">
-                            <a href="../build/pages/sign-in.html"
+                            <a href="../softui/pages/sign-in.html"
                                 class="block px-0 py-2 font-semibold transition-all ease-nav-brand text-sm text-slate-500">
                                 <i class="fa fa-user sm:mr-1"></i>
                                 <span class="hidden sm:inline">{{ Str::limit(Auth::user()->name, 6) }}</span>
@@ -70,7 +70,7 @@
                                         href="javascript:;">
                                         <div class="flex py-1">
                                             <div class="my-auto">
-                                                <img src="../build/assets/img/team-2.jpg"
+                                                <img src="../softui/assets/img/team-2.jpg"
                                                     class="inline-flex items-center justify-center mr-4 text-white text-sm h-9 w-9 max-w-none rounded-xl" />
                                             </div>
                                             <div class="flex flex-col justify-center">
@@ -90,7 +90,7 @@
                                         href="javascript:;">
                                         <div class="flex py-1">
                                             <div class="my-auto">
-                                                <img src="../build/assets/img/small-logos/logo-spotify.svg"
+                                                <img src="../softui/assets/img/small-logos/logo-spotify.svg"
                                                     class="inline-flex items-center justify-center mr-4 text-white text-sm bg-gradient-to-tl from-gray-900 to-slate-800 h-9 w-9 max-w-none rounded-xl" />
                                             </div>
                                             <div class="flex flex-col justify-center">

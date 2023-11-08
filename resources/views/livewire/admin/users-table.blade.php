@@ -9,14 +9,11 @@
             <h6 class="mb-0">Users List</h6>
         </div>
         <div class="flex-none w-1/2 max-w-full px-3 text-right">
-            <div class="relative flex flex-wrap items-stretch w-full transition-all rounded-lg ease-soft">
-                <span
-                    class="text-sm ease-soft leading-5.6 absolute z-50 -ml-px flex h-full items-center whitespace-nowrap rounded-lg rounded-tr-none rounded-br-none border border-r-0 border-transparent bg-transparent py-2 px-2.5 text-center font-normal text-slate-500 transition-all">
+            <div class="relative mb-6">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
                     <i class="fas fa-search" aria-hidden="true"></i>
-                </span>
-                <input type="text"
-                    class="pl-8.75 text-sm focus:shadow-soft-primary-outline ease-soft w-1/100 leading-5.6 relative -ml-px block min-w-0 flex-auto rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 pr-3 text-gray-700 transition-all placeholder:text-gray-500 focus:border-fuchsia-300 focus:outline-none focus:transition-shadow"
-                    placeholder="Search id, name, username" wire:model.live="search">
+                </div>
+                <input type="text" placeholder="Search id, name, username" wire:model.live="search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             </div>
         </div>
     </div>
@@ -75,7 +72,7 @@
                             <td class="p-2 align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
                                 @if ($user->status == 1)
                                     <span
-                                        class="bg-green-600 px-2.5 text-xs
+                                        class="bg-green-400 px-2.5 text-xs
                                 rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center
                                 align-baseline font-bold uppercase leading-none text-white">
                                         Active
@@ -103,7 +100,7 @@
 
                                         <button @click="open = ! open">
                                             <span
-                                                                    class="bg-yellow-500 px-2.5 text-xs
+                                                                    class="bg-yellow-300 px-2.5 text-xs
                                                     rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center
                                                     align-baseline font-bold uppercase leading-none text-white">
                                                                     <i class="fas fa-times-circle" aria-hidden="true"> </i>

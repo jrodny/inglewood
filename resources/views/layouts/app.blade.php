@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../build/assets/img/apple-icon.png" />
-    <link rel="icon" type="image/png" href="../build/assets/img/favicon.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../softui/assets/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="../softui/assets/img/favicon.png" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Plant inglewood</title>
     <!--     Fonts and icons     -->
@@ -13,14 +13,15 @@
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <!-- Nucleo Icons -->
-    <link href="../build/assets/css/nucleo-icons.css" rel="stylesheet" />
-    <link href="../build/assets/css/nucleo-svg.css" rel="stylesheet" />
+    <link href="../softui/assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="../softui/assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- Popper -->
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <!-- Main Styling -->
-    <link href="../build/assets/css/soft-ui-dashboard-tailwind.css?v=1.0.5" rel="stylesheet" />
+    <link href="../softui/assets/css/soft-ui-dashboard-tailwind.css?v=1.0.5" rel="stylesheet" />
     <!-- Scripts -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <!-- Styles -->
     @livewireStyles
 </head>
@@ -64,12 +65,12 @@
     @livewireScripts
 </body>
 <!-- plugin for charts  -->
-<script src="../build/assets/js/plugins/chartjs.min.js" async></script>
+<script src="../softui/assets/js/plugins/chartjs.min.js" async></script>
 <!-- plugin for scrollbar  -->
-<script src="../build/assets/js/plugins/perfect-scrollbar.min.js" async></script>
+<script src="../softui/assets/js/plugins/perfect-scrollbar.min.js" async></script>
 <!-- github button -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <!-- main script file  -->
-<script src="../build/assets/js/soft-ui-dashboard-tailwind.js?v=1.0.5" async></script>
+<script src="../softui/assets/js/soft-ui-dashboard-tailwind.js?v=1.0.5" async></script>
 @stack('scripts')
 </html>
