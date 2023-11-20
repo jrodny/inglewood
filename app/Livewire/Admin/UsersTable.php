@@ -21,7 +21,7 @@ class UsersTable extends Component
 
         session()->flash('message', 'User status updated successfully');
 
-        return redirect()->to('/admin');
+        return redirect()->to('/');
     }
 
     public function render()

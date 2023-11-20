@@ -61,7 +61,7 @@
                                 <div class="flex px-2 py-1">
                                     <div class="flex flex-col justify-center">
                                         <p class="mb-0 text-xs leading-tight text-slate-400">
-                                            {{ $user->name }}
+                                            {{ $user->firstName .' '. $user->lastName }}
                                         </p>
                                     </div>
                                 </div>
@@ -89,6 +89,7 @@
                             <td
                                 class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
                                 <div x-data="{ open: false }">
+                                    <a href=" {{ route('admin.user.edit', $user->id) }}">
                                     <span
                                         class="bg-blue-500 px-2.5 text-xs
                             rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center
@@ -96,6 +97,7 @@
                                         <i class="fas fa-edit" aria-hidden="true"> </i>
                                         edit
                                     </span>
+                                </a>
                                     @if ($user->status == 1)
 
                                         <button @click="open = ! open">

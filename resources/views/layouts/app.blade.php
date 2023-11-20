@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../softui/assets/img/apple-icon.png" />
-    <link rel="icon" type="image/png" href="../softui/assets/img/favicon.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('softui/assets/img/apple-icon.png') }}" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Plant inglewood</title>
     <!--     Fonts and icons     -->
@@ -13,16 +12,16 @@
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <!-- Nucleo Icons -->
-    <link href="../softui/assets/css/nucleo-icons.css" rel="stylesheet" />
-    <link href="../softui/assets/css/nucleo-svg.css" rel="stylesheet" />
+    <link href="{{ asset('softui/assets/css/nucleo-icons.css') }}" rel="stylesheet" />
+    <link href="{{ asset('softui/assets/css/nucleo-svg.css') }}" rel="stylesheet" />
     <!-- Popper -->
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <!-- Main Styling -->
-    <link href="../softui/assets/css/soft-ui-dashboard-tailwind.css?v=1.0.5" rel="stylesheet" />
+    <link href="{{ asset('softui/assets/css/soft-ui-dashboard-tailwind.css?v=1.0.5') }}" rel="stylesheet" />
     <!-- Scripts -->
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <!-- Styles -->
+    <script defer src="https://unpkg.com/alpinejs@3.9.5/dist/cdn.min.js"></script>
     @livewireStyles
 </head>
 
@@ -33,9 +32,9 @@
         <div class="h-19.5 center">
             <i class="absolute top-0 right-0 hidden p-4 opacity-50 cursor-pointer fas fa-times text-slate-400 xl:hidden"
                 sidenav-close></i>
-            <a class="block px-8 py-8 m-0 text-sm whitespace-nowrap text-slate-700" target="_blank">
+            <a class="block px-8 pb-8 m-0 text-sm whitespace-nowrap text-slate-700" target="_blank">
                 <img src="https://inglewoodfarms.com/wp-content/uploads/2020/03/inglewood-organic-chicken-logo.png"
-                    class="inline h-full max-w-full transition-all duration-200 ease-nav-brand max-h-9"
+                    class="inline h-full max-w-full transition-all duration-200 ease-nav-brand max-h-[4rem]"
                     alt="main_logo" />
             </a>
         </div>
@@ -65,12 +64,12 @@
     @livewireScripts
 </body>
 <!-- plugin for charts  -->
-<script src="../softui/assets/js/plugins/chartjs.min.js" async></script>
+<script src="{{ asset('softui/assets/js/plugins/chartjs.min.js') }}" async></script>
 <!-- plugin for scrollbar  -->
-<script src="../softui/assets/js/plugins/perfect-scrollbar.min.js" async></script>
+<script src="{{ asset('softui/assets/js/plugins/perfect-scrollbar.min.js') }}" async></script>
 <!-- github button -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <!-- main script file  -->
-<script src="../softui/assets/js/soft-ui-dashboard-tailwind.js?v=1.0.5" async></script>
-@stack('scripts')
+<script src="{{ asset('softui/assets/js/soft-ui-dashboard-tailwind.js?v=1.0.5') }}" async></script>
+
 </html>

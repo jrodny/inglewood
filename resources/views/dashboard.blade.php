@@ -268,62 +268,7 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="p-2 align-middle bg-transparent border-b whitespace-nowrap">
-                                        <div class="mt-2 avatar-group">
-                                            <a href="javascript:;"
-                                                class="relative z-20 inline-flex items-center justify-center w-6 h-6 text-white transition-all duration-200 border-2 border-white border-solid rounded-full ease-soft-in-out text-xs hover:z-30"
-                                                data-target="tooltip_trigger" data-placement="bottom">
-                                                <img src="../softui/assets/img/team-1.jpg"
-                                                    class="w-full rounded-full" alt="team1" />
-                                            </a>
-                                            <div data-target="tooltip"
-                                                class="hidden px-2 py-1 text-white bg-black rounded-lg text-sm"
-                                                role="tooltip">
-                                                Ryan Tompson
-                                                <div class="invisible absolute h-2 w-2 bg-inherit before:visible before:absolute before:h-2 before:w-2 before:rotate-45 before:bg-inherit before:content-['']"
-                                                    data-popper-arrow></div>
-                                            </div>
-                                            <a href="javascript:;"
-                                                class="relative z-20 inline-flex items-center justify-center w-6 h-6 -ml-4 text-white transition-all duration-200 border-2 border-white border-solid rounded-full ease-soft-in-out text-xs hover:z-30"
-                                                data-target="tooltip_trigger" data-placement="bottom">
-                                                <img src="../softui/assets/img/team-2.jpg"
-                                                    class="w-full rounded-full" alt="team2" />
-                                            </a>
-                                            <div data-target="tooltip"
-                                                class="hidden px-2 py-1 text-white bg-black rounded-lg text-sm"
-                                                role="tooltip">
-                                                Romina Hadid
-                                                <div class="invisible absolute h-2 w-2 bg-inherit before:visible before:absolute before:h-2 before:w-2 before:rotate-45 before:bg-inherit before:content-['']"
-                                                    data-popper-arrow></div>
-                                            </div>
-                                            <a href="javascript:;"
-                                                class="relative z-20 inline-flex items-center justify-center w-6 h-6 -ml-4 text-white transition-all duration-200 border-2 border-white border-solid rounded-full ease-soft-in-out text-xs hover:z-30"
-                                                data-target="tooltip_trigger" data-placement="bottom">
-                                                <img src="../softui/assets/img/team-3.jpg"
-                                                    class="w-full rounded-full" alt="team3" />
-                                            </a>
-                                            <div data-target="tooltip"
-                                                class="hidden px-2 py-1 text-white bg-black rounded-lg text-sm"
-                                                role="tooltip">
-                                                Alexander Smith
-                                                <div class="invisible absolute h-2 w-2 bg-inherit before:visible before:absolute before:h-2 before:w-2 before:rotate-45 before:bg-inherit before:content-['']"
-                                                    data-popper-arrow></div>
-                                            </div>
-                                            <a href="javascript:;"
-                                                class="relative z-20 inline-flex items-center justify-center w-6 h-6 -ml-4 text-white transition-all duration-200 border-2 border-white border-solid rounded-full ease-soft-in-out text-xs hover:z-30"
-                                                data-target="tooltip_trigger" data-placement="bottom">
-                                                <img src="../softui/assets/img/team-4.jpg"
-                                                    class="w-full rounded-full" alt="team4" />
-                                            </a>
-                                            <div data-target="tooltip"
-                                                class="hidden px-2 py-1 text-white bg-black rounded-lg text-sm"
-                                                role="tooltip">
-                                                Jessica Doe
-                                                <div class="invisible absolute h-2 w-2 bg-inherit before:visible before:absolute before:h-2 before:w-2 before:rotate-45 before:bg-inherit before:content-['']"
-                                                    data-popper-arrow></div>
-                                            </div>
-                                        </div>
-                                    </td>
+
                                     <td
                                         class="p-2 leading-normal text-center align-middle bg-transparent border-b text-sm whitespace-nowrap">
                                         <span class="font-semibold leading-tight text-xs"> $14,000 </span>
@@ -363,7 +308,7 @@
                                             <a href="javascript:;"
                                                 class="relative z-20 inline-flex items-center justify-center w-6 h-6 text-white transition-all duration-200 border-2 border-white border-solid rounded-full ease-soft-in-out text-xs hover:z-30"
                                                 data-target="tooltip_trigger" data-placement="bottom">
-                                                <img src="../softui/assets/img/team-2.jpg"
+                                                <img src="{{ asset('softui/assets/img/team-2.jpg') }}"
                                                     class="w-full rounded-full" alt="team5" />
                                             </a>
                                             <div data-target="tooltip"
@@ -475,19 +420,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="p-2 align-middle bg-transparent border-b whitespace-nowrap">
-                                        <div class="flex px-2 py-1">
-                                            <div>
-                                                <img src="../softui/assets/img/small-logos/logo-spotify.svg"
-                                                    class="inline-flex items-center justify-center mr-4 text-white transition-all duration-200 ease-soft-in-out text-sm h-9 w-9 rounded-xl"
-                                                    alt="spotify" />
-                                            </div>
-                                            <div class="flex flex-col justify-center">
-                                                <h6 class="mb-0 leading-normal text-sm">Launch our Mobile App
-                                                </h6>
-                                            </div>
-                                        </div>
-                                    </td>
+
                                     <td class="p-2 align-middle bg-transparent border-b whitespace-nowrap">
                                         <div class="mt-2 avatar-group">
                                             <a href="javascript:;"

@@ -13,8 +13,6 @@
                             aria-current="page">{{ Request::path() }}</li>
                         @include('partials.subpages')
                     </ol>
-                    <h6 class="mb-0 capitalize">{{ Request::path() }}</h6>
-
                 </nav>
 
                 <div class="flex items-center mt-2 grow sm:mt-0 sm:mr-6 md:mr-0 lg:flex lg:basis-auto">
@@ -70,7 +68,7 @@
                                         href="javascript:;">
                                         <div class="flex py-1">
                                             <div class="my-auto">
-                                                <img src="../softui/assets/img/team-2.jpg"
+                                                <img src="{{ asset('softui/assets/img/team-2.jpg') }}"
                                                     class="inline-flex items-center justify-center mr-4 text-white text-sm h-9 w-9 max-w-none rounded-xl" />
                                             </div>
                                             <div class="flex flex-col justify-center">
@@ -90,7 +88,7 @@
                                         href="javascript:;">
                                         <div class="flex py-1">
                                             <div class="my-auto">
-                                                <img src="../softui/assets/img/small-logos/logo-spotify.svg"
+                                                <img src="{{ asset('softui/assets/img/small-logos/logo-spotify.svg') }}"
                                                     class="inline-flex items-center justify-center mr-4 text-white text-sm bg-gradient-to-tl from-gray-900 to-slate-800 h-9 w-9 max-w-none rounded-xl" />
                                             </div>
                                             <div class="flex flex-col justify-center">

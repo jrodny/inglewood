@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class CreateEditUserRequest extends FormRequest
 {
@@ -21,11 +22,49 @@ class CreateEditUserRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            'lname' => ['required', 'string', 'max:255'],
-            'fname' => ['required', 'string', 'max:255'],
-            'username' => ['required', 'string', 'min:5', 'max:255', 'unique:users'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+        $userId = $this->route('id');
+
+        $rules = [
+            'firstName' => ['required', 'string', 'max:255'],
+            'lastName' => ['required', 'string', 'max:255'],
         ];
+
+        if ($this->isMethod('PUT')) {
+            $rules = array_merge($rules, [
+                'username' => [
+                    'required',
+                    'string',
+                    'min:5',
+                    'max:255',
+                    Rule::unique('users', 'username')->ignore($userId),
+                ],
+                'email' => [
+                    'required',
+                    'string',
+                    'email',
+                    'max:255',
+                    Rule::unique('users', 'email')->ignore($userId),
+                ],
+            ]);
+        } else {
+            $rules = array_merge($rules, [
+                'username' => [
+                    'required',
+                    'string',
+                    'min:5',
+                    'max:255',
+                    'unique:users',
+                ],
+                'email' => [
+                    'required',
+                    'string',
+                    'email',
+                    'max:255',
+                    'unique:users,email',
+                ]
+            ]);
+        }
+
+        return $rules;
     }
 }

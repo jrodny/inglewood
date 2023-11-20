@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Traits\HasPermissions;
 use Spatie\Permission\Traits\HasRoles;
 
@@ -28,7 +29,8 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'username',
-        'name',
+        'firstName',
+        'lastName',
         'email',
         'password',
         'status',
@@ -71,10 +73,16 @@ class User extends Authenticatable
 
     public function scopeSearch($query, $search)
     {
-        return $query->where('name', 'like', '%' . $search . '%')
+        return $query->where('firstName', 'like', '%' . $search . '%')
+                    ->orWhere('lastName', 'like', '%' . $search . '%')
                     ->orWhere('username', 'like', '%'. $search. '%')
                     ->orWhere('email', 'like', '%'. $search. '%')
                     ->orWhere('id', 'like', '%'. $search. '%');
+    }
+
+    public function hasPermissition()
+    {
+        return $this->belongsToMany(Permission::class, 'model_has_permissions', 'model_id', 'permission_id');
     }
 
     protected static function boot()

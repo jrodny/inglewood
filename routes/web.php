@@ -41,16 +41,18 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])
     Route::get('/dashboard', DashboardController::class)->name('dashboard');
 
     // middleware only admin can view and visit routes
-    Route::middleware([CheckPermission::class . ':ModuleAdmin'])->prefix('admin')->name('admin.')->group(function () {
-        Route::get('/', AdminDashBoardController::class)->name('dashboard');
+    Route::middleware([CheckPermission::class . ':ModuleAdmin'])->group(function () {
+        Route::group(['as'=> 'admin.'], function () {
+            Route::get('/', AdminDashBoardController::class)->name('dashboard');
 
-        Route::get('/user', [UserController::class, 'index'])->name('user.index');
-        Route::get('/user/edit/{id}', [UserController::class, 'store'])->name('user.store');
-        Route::post('/user/store', [UserController::class, 'store'])->name('user.store');
-        Route::group(['prefix' => 'user'], function () {
-
+            //user
+            Route::group(['prefix' => 'user', 'as' => 'user.'], function () {
+                Route::get('/', [UserController::class, 'index'])->name('index');
+                Route::get('/edit/{id}', [UserController::class, 'edit'])->name('edit');
+                Route::post('/store', [UserController::class, 'store'])->name('store');
+                Route::put('/update/{id}', [UserController::class, 'update'])->name('update');
+            });
         });
-
     });
 
     Route::prefix('crm')->group(function () {

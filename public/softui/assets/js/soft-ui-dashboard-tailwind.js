@@ -20,42 +20,42 @@ var aux = window.location.pathname.split("/");
 var to_build = (aux.includes('pages') ? '../' : './');
 var root = window.location.pathname.split("/")
 if (!aux.includes("pages")) {
-    page = "dashboard";
+    page = "/";
 }
 
-loadStylesheet("../softui/assets/css/perfect-scrollbar.css");
-loadJS("../softui/assets/js/perfect-scrollbar.js", true);
+loadStylesheet(page + "softui/assets/css/perfect-scrollbar.css");
+loadJS(page + "softui/assets/js/perfect-scrollbar.js", true);
 
 if (document.querySelector("nav [navbar-trigger]")) {
-    loadJS("../softui/assets/js/navbar-collapse.js", true);
+    loadJS(page + "softui/assets/js/navbar-collapse.js", true);
 }
 
 if (document.querySelector("[data-target='tooltip']")) {
-    loadJS("../softui/assets/js/tooltips.js", true);
-    loadStylesheet("../softui/assets/css/tooltips.css");
+    loadJS(page + "softui/assets/js/tooltips.js", true);
+    loadStylesheet(page + "softui/assets/css/tooltips.css");
 }
 
 if (document.querySelector("[nav-pills]")) {
-    loadJS("../softui/assets/js/nav-pills.js", true);
+    loadJS(page + "softui/assets/js/nav-pills.js", true);
 }
 
 if (document.querySelector("[dropdown-trigger]")) {
-    loadJS("../softui/assets/js/dropdown.js", true);
+    loadJS(page + "softui/assets/js/dropdown.js", true);
 
 }
 
 if (document.querySelector("[fixed-plugin]")) {
-    loadJS("../softui/assets/js/fixed-plugin.js", true);
+    loadJS(page + "softui/assets/js/fixed-plugin.js", true);
 }
 
 if (document.querySelector("[navbar-main]")) {
-    loadJS("../softui/assets/js/sidenav-burger.js", true);
-    loadJS("../softui/assets/js/navbar-sticky.js", true);
+    loadJS(page + "softui/assets/js/sidenav-burger.js", true);
+    loadJS(page + "softui/assets/js/navbar-sticky.js", true);
 }
 
 if (document.querySelector("canvas")) {
-    loadJS("../softui/assets/js/chart-1.js", true);
-    loadJS("../softui/assets/js/chart-2.js", true);
+    loadJS(page + "softui/assets/js/chart-1.js", true);
+    loadJS(page + "softui/assets/js/chart-2.js", true);
 }
 
 function loadJS(FILE_URL, async) {
@@ -65,7 +65,7 @@ function loadJS(FILE_URL, async) {
     dynamicScript.setAttribute("type", "text/javascript");
     dynamicScript.setAttribute("async", async);
 
-    document.head.appendChild(dynamicScript);
+    document.head.appendChild(dynamicScript)
 }
 
 function loadStylesheet(FILE_URL) {
